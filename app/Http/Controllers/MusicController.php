@@ -53,7 +53,7 @@ class MusicController extends Controller
             'audio'=>$request['audio'],
             'audio'=>$audioName]);
 
-        return redirect('/dashboard')->with('success', 'Music has been added.');
+        return redirect('/music')->with('success', 'Music has been added.');
     
     }
 
@@ -115,7 +115,7 @@ class MusicController extends Controller
             'audio'=>$request['audio'],
             'audio'=>$audioName]);
 
-        return redirect('/dashboard')->with('success', 'Music has been added.');
+        return redirect('/music')->with('success', 'Music has been added.');
     
     }
   
@@ -130,6 +130,6 @@ class MusicController extends Controller
     {
         $music = Music::find($id);
         $music->delete();
-        return redirect('dashboard')->with('success', 'Music has been deleted.');
+        return redirect('music')->with('success', 'Music has been deleted.');
     }
 }
